@@ -1,0 +1,60 @@
+# Project: Decorator
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o HouseBlend.o DarkRoast.o Beverage.o Espresso.o Decaf.o CondimentDecorator.o Milk.o Mocha.o Whip.o Soy.o $(RES)
+LINKOBJ  = main.o HouseBlend.o DarkRoast.o Beverage.o Espresso.o Decaf.o CondimentDecorator.o Milk.o Mocha.o Whip.o Soy.o $(RES)
+LIBS =  -L"C:/Progra~1/Dev-Cpp/lib"  
+INCS =  -I"C:/Progra~1/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Progra~1/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Progra~1/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Progra~1/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Progra~1/Dev-Cpp/include/c++/3.4.2"  -I"C:/Progra~1/Dev-Cpp/include" 
+BIN  = Decorator.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Decorator.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Decorator.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+HouseBlend.o: HouseBlend.cpp
+	$(CPP) -c HouseBlend.cpp -o HouseBlend.o $(CXXFLAGS)
+
+DarkRoast.o: DarkRoast.cpp
+	$(CPP) -c DarkRoast.cpp -o DarkRoast.o $(CXXFLAGS)
+
+Beverage.o: Beverage.cpp
+	$(CPP) -c Beverage.cpp -o Beverage.o $(CXXFLAGS)
+
+Espresso.o: Espresso.cpp
+	$(CPP) -c Espresso.cpp -o Espresso.o $(CXXFLAGS)
+
+Decaf.o: Decaf.cpp
+	$(CPP) -c Decaf.cpp -o Decaf.o $(CXXFLAGS)
+
+CondimentDecorator.o: CondimentDecorator.cpp
+	$(CPP) -c CondimentDecorator.cpp -o CondimentDecorator.o $(CXXFLAGS)
+
+Milk.o: Milk.cpp
+	$(CPP) -c Milk.cpp -o Milk.o $(CXXFLAGS)
+
+Mocha.o: Mocha.cpp
+	$(CPP) -c Mocha.cpp -o Mocha.o $(CXXFLAGS)
+
+Whip.o: Whip.cpp
+	$(CPP) -c Whip.cpp -o Whip.o $(CXXFLAGS)
+
+Soy.o: Soy.cpp
+	$(CPP) -c Soy.cpp -o Soy.o $(CXXFLAGS)
